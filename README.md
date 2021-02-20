@@ -28,7 +28,8 @@ cnarea20191031.7z是爬取2019年的数据,截止2019年10月31日.
 2019比2018的数据多了5470条记录
 具体说明见 #48
 表结构
-CREATE TABLE `cnarea_2018` (
+···mysql
+CREATE TABLE `cnarea_2019` (
   `id` mediumint(7) unsigned NOT NULL AUTO_INCREMENT,
   `level` tinyint(1) unsigned NOT NULL COMMENT '层级',
   `parent_code` bigint(14) unsigned NOT NULL DEFAULT '0' COMMENT '父级行政代码',
@@ -45,3 +46,4 @@ CREATE TABLE `cnarea_2018` (
   UNIQUE KEY `uk_code` (`area_code`) USING BTREE,
   KEY `idx_parent_code` (`parent_code`) USING BTREE
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='中国行政地区表';
+···
